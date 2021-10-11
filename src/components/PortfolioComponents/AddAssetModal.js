@@ -78,6 +78,7 @@ function AddAssetModal() {
             <Grid item xs={12} display="flex">
               <Grid item xs={6} marginRight={1}>
                 <TextField
+                  required
                   label="Quantity"
                   size="small"
                   type="number"
@@ -105,8 +106,10 @@ function AddAssetModal() {
             <Grid item>
               <TextField
                 required
+                label="Date"
                 size="small"
                 type="date"
+                InputLabelProps={{ shrink: true }}
                 fullWidth
                 value={transactionDate}
                 onChange={(e) => {
