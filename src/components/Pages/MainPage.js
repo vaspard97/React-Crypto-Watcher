@@ -11,7 +11,6 @@ function MainPage() {
     getCoin();
     // eslint-disable-next-line
   }, []);
-  console.log(coins);
   return (
     <Grid
       container

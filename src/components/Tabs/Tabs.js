@@ -23,7 +23,7 @@ export default function ControllerTab() {
         >
           <Tab label="Home" component={Link} to="/" />
           <Tab label="Watchlist" component={Link} to="/watchlist" />
-          {/* <Tab label="Portfolio" component={Link} to="/portfolio" /> */}
+          <Tab label="Portfolio" component={Link} to="/portfolio" />
         </Tabs>
       </Box>
     </>

@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../context/globalContext";
 
 import Select from "react-select";
 
-function SelectCoinDropDown() {
+function SelectCoinDropDown({ setCoinName }) {
   const { coins } = useContext(AppContext);
-  const [trasnsaction, setTransaction] = useState([{ coinName: "" }]);
 
   const options = coins.map((coin) => {
     return {
@@ -32,8 +31,7 @@ function SelectCoinDropDown() {
         menu: (provided) => ({ ...provided, zIndex: 9999 }),
       }}
       onChange={(e) => {
-        console.log(e.value);
-        setTransaction([...trasnsaction, { coinName: e.value }]);
+        setCoinName(e.value);
       }}
     />
   );
